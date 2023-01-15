@@ -11,6 +11,7 @@ import dark from './styles/themes/dark';
 export default function App() {
 
   const [theme, setTheme] = useState(light);
+  const [points, setPoints] = useState(0);
 
   const toggleTheme = () => {
     setTheme(theme.title === 'light' ? dark : light);
@@ -20,8 +21,8 @@ export default function App() {
     <ThemeProvider theme={theme}>
       <div>
         <GlobalStyle />
-        <Header toggleTheme={toggleTheme}/>
-        <Game/>
+        <Header points={points} toggleTheme={toggleTheme}/>
+        <Game points={points}/>
       </div>
     </ThemeProvider>
   )

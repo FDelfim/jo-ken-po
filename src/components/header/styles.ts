@@ -6,3 +6,11 @@ export const Container = styled.div`
     color: ${props => props.theme.text};
     font-size: 30px;
 `
+
+export const Points = styled.div`
+    background-color: ${props => props.theme.colors.terciary};
+    text-align: center;
+    border-radius: 30px;
+    color: ${props => props.theme.text};
+    font-weght: bold;
+`
